@@ -14,11 +14,15 @@ void monoalphabeticEncryption()
     plain_text[strcspn(plain_text, "\n")] = '\0';
 
 
-    for (i = 0; plain_text[i]; i++) {
-        if (isalpha(plain_text[i])) {
+    for (i = 0; plain_text[i]; i++) 
+    {
+        if (isalpha(plain_text[i])) 
+        {
             int index = toupper(plain_text[i]) - 'A';
             cipher_text[i] = mapping[index];
-        } else {
+        } 
+        else 
+        {
             cipher_text[i] = plain_text[i];
         }
     }
